@@ -1,4 +1,4 @@
-202210-W2CH5-yanira-zapata
+# 202210-W2CH5-yanira-zapata
 
 # El juego de la vida
 
@@ -9,9 +9,8 @@ Si tiene menos de 2 células contiguas vivas, muere por "soledad".
 Si tiene más de 3 células contiguas vivas, muere por "sobrepoblación".
 Si tiene 2 o 3 células contiguas vivas, sobrevive.
 Una célula muerta sigue la siguiente regla: Permanece muerta hasta que tiene exactamente 3 células contiguas vivas, momento en el que "nace".
-Si quieres probar como funciona para hacerte una idea, puedes probar una versión funcional en esta página.
 
-Requisitos
+# Requisitos
 
 Debe de estar testeado con Jest.
 Debe utilizarse SonarQube para ir comprobando la calidad del código.
