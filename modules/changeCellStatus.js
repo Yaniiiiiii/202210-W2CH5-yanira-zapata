@@ -1,4 +1,3 @@
-import { gameOfLife } from './board.js';
 import { countingAliveCells, countingDeathCells } from './counter.js';
 
 export const changingCellStatus = (board) => {
@@ -14,7 +13,9 @@ export const changingCellStatus = (board) => {
         if (aliveItem.countN < 2) {
             board2[aliveItem.r][aliveItem.c] = 0;
         }
+        if (aliveItem.countN > 3) {
+            board2[aliveItem.r][aliveItem.c] = 0;
+        }
     });
     return board;
 };
-console.log(changingCellStatus(gameOfLife));
