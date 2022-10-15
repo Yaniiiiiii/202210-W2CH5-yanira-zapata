@@ -1,23 +1,15 @@
-const gameOfLife = [
-    ['*', '*', '*', '*', '*'],
-    ['*', 0, 1, 0, '*'],
-    ['*', 0, 1, 0, '*'],
-    ['*', 0, 1, 0, '*'],
-    ['*', '*', '*', '*', '*'],
-];
-
-function AliveItems(r, c, countN) {
+export function AliveItems(r, c, countN) {
     this.r = r;
     this.c = c;
     this.countN = countN;
 }
-function DeathItems(r, c, countN) {
+export function DeathItems(r, c, countN) {
     this.r = r;
     this.c = c;
     this.countN = countN;
 }
 
-const countingAliveNeightbours = (array) => {
+export const countingAliveCells = (array) => {
     let arrayAliveObjects = [];
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length; j++) {
@@ -39,9 +31,7 @@ const countingAliveNeightbours = (array) => {
     return arrayAliveObjects;
 };
 
-console.log(countingAliveNeightbours(gameOfLife));
-
-const countingDeathNeightbours = (array) => {
+export const countingDeathCells = (array) => {
     let arrayDeathObjects = [];
     for (let i = 1; i < array.length - 1; i++) {
         for (let j = 1; j < array.length - 1; j++) {
@@ -61,6 +51,3 @@ const countingDeathNeightbours = (array) => {
     }
     return arrayDeathObjects;
 };
-
-console.log(countingDeathNeightbours(gameOfLife));
-console.table(gameOfLife);
