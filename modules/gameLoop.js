@@ -17,7 +17,6 @@ export const changeArrayContent = (board) => {
             console.table(board2);
             board = changingCellStatus(board2);
             sentinel = true;
-            continue;
         }
     }
 };
