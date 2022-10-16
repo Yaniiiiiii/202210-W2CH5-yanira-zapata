@@ -1,4 +1,4 @@
-import { gameOfLife } from './board.js';
+import { gameOfCells } from './board.js';
 import { changingCellStatus } from './changeCellStatus.js';
 import { countingAliveCells, countingDeathCells } from './counter.js';
 
@@ -25,4 +25,4 @@ export const changeArrayContent = (board, aliveCells,deathCells) => {
                 );
     }
 };
-changeArrayContent(gameOfLife);
+changeArrayContent(gameOfCells);
