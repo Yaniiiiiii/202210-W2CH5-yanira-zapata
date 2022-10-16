@@ -8,16 +8,16 @@ export const countingAliveCells = (array) => {
     let arrayAliveCells = [];
     for (let i = 1; i < array.length - 1; i++) {
         for (let j = 1; j < array.length + 1; j++) {
-            if (array[i][j] === 1) {
+            if (array[i][j] === '😵‍💫') {
                 let count = 0;
-                if (array[i - 1][j] === 1) count++;
-                if (array[i + 1][j] === 1) count++;
-                if (array[i][j - 1] === 1) count++;
-                if (array[i][j + 1] === 1) count++;
-                if (array[i - 1][j - 1] === 1) count++;
-                if (array[i + 1][j - 1] === 1) count++;
-                if (array[i - 1][j + 1] === 1) count++;
-                if (array[i + 1][j + 1] === 1) count++;
+                if (array[i - 1][j] === '😵‍💫') count++;
+                if (array[i + 1][j] === '😵‍💫') count++;
+                if (array[i][j - 1] === '😵‍💫') count++;
+                if (array[i][j + 1] === '😵‍💫') count++;
+                if (array[i - 1][j - 1] === '😵‍💫') count++;
+                if (array[i + 1][j - 1] === '😵‍💫') count++;
+                if (array[i - 1][j + 1] === '😵‍💫') count++;
+                if (array[i + 1][j + 1] === '😵‍💫') count++;
                 arrayAliveCells.push(new Cell(i, j, count));
             }
         }
@@ -29,16 +29,16 @@ export const countingDeathCells = (array) => {
     let arrayDeathCells = [];
     for (let i = 1; i < array.length - 1; i++) {
         for (let j = 1; j < array.length - 1; j++) {
-            if (array[i][j] === 0) {
+            if (array[i][j] === '🫥') {
                 let count = 0;
-                if (array[i - 1][j] === 1) count++;
-                if (array[i + 1][j] === 1) count++;
-                if (array[i][j - 1] === 1) count++;
-                if (array[i][j + 1] === 1) count++;
-                if (array[i - 1][j - 1] === 1) count++;
-                if (array[i + 1][j - 1] === 1) count++;
-                if (array[i - 1][j + 1] === 1) count++;
-                if (array[i + 1][j + 1] === 1) count++;
+                if (array[i + 1][j] === '😵‍💫') count++;
+                if (array[i - 1][j] === '😵‍💫') count++;
+                if (array[i][j - 1] === '😵‍💫') count++;
+                if (array[i][j + 1] === '😵‍💫') count++;
+                if (array[i - 1][j - 1] === '😵‍💫') count++;
+                if (array[i + 1][j - 1] === '😵‍💫') count++;
+                if (array[i - 1][j + 1] === '😵‍💫') count++;
+                if (array[i + 1][j + 1] === '😵‍💫') count++;
                 arrayDeathCells.push(new Cell(i, j, count));
             }
         }
