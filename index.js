@@ -1,6 +1,11 @@
-import { gameOfLife } from './modules/board';
-import { countingAliveCells, countingDeathCells } from './modules/counter.js';
+import { gameOfCells } from './gameOfLife/board.js';
+import {
+    countingAliveCells,
+    countingDeathCells,
+} from './gameOfLife/counter.js';
+import { changingCellStatus } from './gameOfLife/changeCellStatus.js';
+//import { changeArrayContent } from './modules/gameLoop';
 
-console.log(countingAliveCells(gameOfLife));
-console.log(countingDeathCells(gameOfLife));
-console.table(gameOfLife);
+console.log(countingAliveCells(gameOfCells));
+console.log(countingDeathCells(gameOfCells));
+console.table(gameOfCells);

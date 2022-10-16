@@ -1,28 +1,24 @@
-import { gameOfLife } from './board.js';
+import { gameOfCells } from './board.js';
 import { changingCellStatus } from './changeCellStatus.js';
-import { countingAliveCells, countingDeathCells } from './counter.js';
 
-export const changeArrayContent = (board, aliveCells,deathCells) => {
-  for (i= 0; i< 10, i++) {
+export const changeArrayContent = (board) => {
+    console.table(board);
+    let board2 = changingCellStatus(board);
     let sentinel = true;
-    if (sentinel){
-    const board3 = changingCellStatus(board);
-    let aliveCells = countingAliveCells(board3);
-    let deathCells = countingDeathCells(board3);
-    changingCellStatus(board3, aliveCells, deathCells)
-    sentinel = false;
-        console.log(changingCellStatus(board3, aliveCells, deathCells));
-    }
-  }
-    if (sentinel){
-    const board2 = changingCellStatus(board);
-    let aliveCells = countingAliveCells(board2);
-    let deathCells = countingDeathCells(board2);
-    changingCellStatus(board3, aliveCells, deathCells);
-    sentinel = true;
-    console.table(
-                changingCellStatus(board2, aliveCells, deathCells)
-                );
+    for (let i = 0; i < 5; i++) {
+        if (sentinel) {
+            console.table(board);
+            board2 = changingCellStatus(board);
+            sentinel = false;
+            continue;
+        }
+
+        if (!sentinel) {
+            console.table(board2);
+            board = changingCellStatus(board2);
+            sentinel = true;
+            continue;
+        }
     }
 };
-changeArrayContent(gameOfLife);
+changeArrayContent(gameOfCells);
