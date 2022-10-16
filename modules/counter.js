@@ -1,4 +1,3 @@
-import { gameOfCells } from './board.js';
 export function Cell(row, column, countN) {
     this.row = row;
     this.column = column;
@@ -46,6 +45,3 @@ export const countingDeathCells = (array) => {
     }
     return arrayDeathCells;
 };
-
-console.log(countingDeathCells(gameOfCells));
-console.log(countingAliveCells(gameOfCells));
